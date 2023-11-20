@@ -1,0 +1,22 @@
+<h1>HBS Rendered file!</h1>
+
+Your message is:
+{{msg}}
+<br /><br />
+Country name:
+{{country.name}}
+<br />
+Country capital:
+{{country.capital}}
+
+<br /><br />
+{{#each countries}}
+  {{#if this.western}}
+    <li>{{this.name}} -- {{this.capital}}</li>
+  {{/if}}
+
+  {{#unless this.western}}
+    <li>{{this.name}} -- {{this.capital}}</li>
+  {{/unless}}
+{{/each}}
+<br /><br />
